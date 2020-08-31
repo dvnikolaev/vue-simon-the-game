@@ -17,6 +17,11 @@
     <button class="options__button" @click="startGame" :disabled="isStart">
       старт
     </button>
+    <div class="difficulty-description">
+      <p>Легко - Время между каждой кнопкой - 1.5с.</p>
+      <p>Нормально - Время между каждой кнопкой - 1с.</p>
+      <p>Сложно - Время между каждой кнопкой - 0.4с.</p>
+    </div>
   </div>
 </template>
 
@@ -80,5 +85,10 @@ export default {
 }
 .options__button:disabled {
   background-color: rgb(190, 190, 190);
+}
+.difficulty-description {
+  margin-top: 40px;
+  font-size: 16px;
+  color: rgb(160, 160, 160);
 }
 </style>
