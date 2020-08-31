@@ -67,7 +67,7 @@ export default {
 
 <style>
 .circle__part {
-  width: 200px;
+  width: 50%;
   height: 200px;
   border: none;
   outline: none;
