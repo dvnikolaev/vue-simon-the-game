@@ -10,7 +10,12 @@
         @update:userChain="updateUserChain"
       />
     </div>
-    <GameOptions @startGame="start" :isStart="isStart" />
+    <GameOptions
+      @startGame="start"
+      :isStart="isStart"
+      :difficulty="difficulty"
+      @update:difficulty="updateDifficulty"
+    />
   </div>
 </template>
 
@@ -52,6 +57,7 @@ export default {
           id: 4,
         },
       ],
+      difficulty: 1500,
     };
   },
   methods: {
@@ -63,6 +69,9 @@ export default {
     pushRandomId() {
       const id = Math.floor(Math.random() * 4) + 1;
       this.chain.push(id);
+    },
+    updateDifficulty(value) {
+      this.difficulty = value;
     },
     startTheGame(index = 0) {
       if (!this.isDisableButton) {
@@ -81,7 +90,7 @@ export default {
 
       setTimeout(() => {
         this.startTheGame(index + 1);
-      }, 1500);
+      }, this.difficulty);
     },
     updateUserChain(id) {
       this.userChain.push(id);
@@ -115,7 +124,7 @@ export default {
       audioThree.currentTime = 0;
       audioFour.pause();
       audioFour.currentTime = 0;
-    }
+    },
   },
   watch: {
     activeItem(val) {
