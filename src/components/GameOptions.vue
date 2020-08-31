@@ -1,5 +1,6 @@
 <template>
   <div class="options">
+    <h2 class="options__header">Счет: {{ step }}</h2>
     <div class="options-difficulty">
       <h3 class="options-difficulty__header">Сложность:</h3>
       <label v-for="item in difficultyArray" :key="item.value">
@@ -30,6 +31,7 @@ export default {
   props: {
     isStart: Boolean,
     difficulty: Number,
+    step: Number
   },
   data() {
     return {

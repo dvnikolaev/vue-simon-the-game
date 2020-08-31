@@ -15,6 +15,7 @@
       :isStart="isStart"
       :difficulty="difficulty"
       @update:difficulty="updateDifficulty"
+      :step="step"
     />
   </div>
 </template>
