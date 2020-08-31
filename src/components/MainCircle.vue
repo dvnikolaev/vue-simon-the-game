@@ -82,7 +82,7 @@ export default {
 
       setTimeout(() => {
         this.activeItem = null;
-      }, 500);
+      }, this.difficulty - 100);
 
       if (this.step === index) {
         this.isDisableButton = false;
