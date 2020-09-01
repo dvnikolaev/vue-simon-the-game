@@ -1,5 +1,8 @@
 # vue-simon-the-game
 
+## https://dvnikolaev.github.io/vue-simon-the-game/
+
+
 ## Project setup
 ```
 npm install
